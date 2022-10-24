@@ -1,4 +1,4 @@
-name: Node.js CI
+name: NamibiaEMR CI
 
 on:
   push:
@@ -10,8 +10,8 @@ on:
       - created
 
 env:
-  ESM_NAME: "@openmrs/esm-template-app"
-  JS_NAME: "openmrs-esm-template-app.js"
+  ESM_NAME: "@ohri/esm-namibia-emr"
+  JS_NAME: "esm-namibia-emr-app.js"
 
 jobs:
   build:
@@ -86,7 +86,7 @@ jobs:
       - run: yarn config set npmAuthToken "${NODE_AUTH_TOKEN}" &&  yarn npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-  
+
   deploy:
     runs-on: ubuntu-latest
 
