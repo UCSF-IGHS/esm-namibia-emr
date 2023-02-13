@@ -2697,9 +2697,7 @@ __metadata:
   dependencies:
     "@carbon/react": ^1.14.0
     "@ohri/openmrs-esm-ohri-commons-lib": ^1.0.0-pre.2016
-    "@ohri/openmrs-ohri-form-engine-lib": 1.x
     "@openmrs/esm-framework": next
-    "@openmrs/esm-styleguide": next
     "@swc/cli": ^0.1.57
     "@swc/core": ^1.3.6
     "@swc/jest": ^0.2.23
@@ -2710,8 +2708,6 @@ __metadata:
     "@types/jest": ^28.0.0
     "@types/react": ^18.0.21
     "@types/react-dom": ^18.0.6
-    "@types/react-router": ^5.1.19
-    "@types/react-router-dom": ^5.3.3
     "@types/webpack-env": ^1.16.0
     "@typescript-eslint/parser": ^5.40.0
     concurrently: ^7.4.0
@@ -2731,7 +2727,6 @@ __metadata:
     react: ^18.2.0
     react-dom: ^18.2.0
     react-i18next: ^11.18.6
-    react-router-dom: ^6.4.2
     rxjs: ^6.5.4
     swc-loader: ^0.2.3
     typescript: ^4.8.4
@@ -2739,10 +2734,8 @@ __metadata:
     webpack-cli: ^4.10.0
   peerDependencies:
     "@openmrs/esm-framework": 4.x
-    dayjs: 1.x
     react: 18.x
     react-i18next: 11.x
-    react-router-dom: 6.x
     rxjs: 6.x
   languageName: unknown
   linkType: soft
@@ -2768,7 +2761,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ohri/openmrs-ohri-form-engine-lib@npm:1.x, @ohri/openmrs-ohri-form-engine-lib@npm:^1.0.0-pre.118":
+"@ohri/openmrs-ohri-form-engine-lib@npm:^1.0.0-pre.118":
   version: 1.0.1
   resolution: "@ohri/openmrs-ohri-form-engine-lib@npm:1.0.1"
   dependencies:
@@ -2981,25 +2974,6 @@ __metadata:
     react-dom: 18.x
     rxjs: 6.x
   checksum: c4cd603429aceda54fe8e339488e67b0c01cd726b54ec88ede656e6e0c1e338bfa6bf8e4a9e4677bd43f62056bd1e1d25242666df99687116618861f4c33652c
-  languageName: node
-  linkType: hard
-
-"@openmrs/esm-styleguide@npm:next":
-  version: 4.0.3-pre.364
-  resolution: "@openmrs/esm-styleguide@npm:4.0.3-pre.364"
-  dependencies:
-    "@carbon/charts": ^1.5.0
-    "@carbon/react": ^1.12.0
-    d3: ^7.6.1
-    lodash-es: ^4.17.21
-  peerDependencies:
-    "@openmrs/esm-extensions": 4.x
-    "@openmrs/esm-react-utils": 4.x
-    "@openmrs/esm-state": 4.x
-    react: 18.x
-    react-dom: 18.x
-    rxjs: 6.x
-  checksum: ef6475b3e12c1663a08390475b20ed84d22eff593233a19e9cd87f731ac8a4334df468ac0e84797f963a0be73a5fe228a6b4cda1f69acca0a328ddfae14e7f9a
   languageName: node
   linkType: hard
 
@@ -3768,13 +3742,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/history@npm:^4.7.11":
-  version: 4.7.11
-  resolution: "@types/history@npm:4.7.11"
-  checksum: c92e2ba407dcab0581a9afdf98f533aa41b61a71133420a6d92b1ca9839f741ab1f9395b17454ba5b88cb86020b70b22d74a1950ccfbdfd9beeaa5459fdc3464
-  languageName: node
-  linkType: hard
-
 "@types/html-minifier-terser@npm:^6.0.0":
   version: 6.1.0
   resolution: "@types/html-minifier-terser@npm:6.1.0"
@@ -3953,37 +3920,6 @@ __metadata:
   dependencies:
     "@types/react": "*"
   checksum: db571047af1a567631758700b9f7d143e566df939cfe5fbf7535347cc0c726a1cdbb5e3f8566d076e54cf708b6c1166689de194a9ba09ee35efc9e1d45911685
-  languageName: node
-  linkType: hard
-
-"@types/react-router-dom@npm:^5.3.3":
-  version: 5.3.3
-  resolution: "@types/react-router-dom@npm:5.3.3"
-  dependencies:
-    "@types/history": ^4.7.11
-    "@types/react": "*"
-    "@types/react-router": "*"
-  checksum: 28c4ea48909803c414bf5a08502acbb8ba414669b4b43bb51297c05fe5addc4df0b8fd00e0a9d1e3535ec4073ef38aaafac2c4a2b95b787167d113bc059beff3
-  languageName: node
-  linkType: hard
-
-"@types/react-router@npm:*":
-  version: 5.1.18
-  resolution: "@types/react-router@npm:5.1.18"
-  dependencies:
-    "@types/history": ^4.7.11
-    "@types/react": "*"
-  checksum: f08b37ee822f9f9ff904ffd0778fe2bb7c717ed3ee311610382ee024d02a35169bd3301ecde863cac21aae8fdee919501e8ea22bad0260c02c10cfbdba5c71be
-  languageName: node
-  linkType: hard
-
-"@types/react-router@npm:^5.1.19":
-  version: 5.1.19
-  resolution: "@types/react-router@npm:5.1.19"
-  dependencies:
-    "@types/history": ^4.7.11
-    "@types/react": "*"
-  checksum: 3536c3dec7af1f12fed2bea246eb143bd893ee66d4e58c1d3fe734cbd67d8a0aedac0bba9255c58fc69dbd32ae17ad280d6866916aee32653a705178e4a544dc
   languageName: node
   linkType: hard
 
@@ -12674,7 +12610,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router-dom@npm:^6.3.0, react-router-dom@npm:^6.4.2":
+"react-router-dom@npm:^6.3.0":
   version: 6.4.2
   resolution: "react-router-dom@npm:6.4.2"
   dependencies:
