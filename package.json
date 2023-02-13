@@ -1,5 +1,5 @@
 {
-  "name": "@ohri/esm-namibia-emr",
+  "name": "@ohri/esm-namibia-emr-app",
   "version": "1.0.0",
   "license": "MPL-2.0",
   "description": "A microfrontend for Namibia EMR",
@@ -52,7 +52,7 @@
     "lodash-es": "^4.17.15"
   },
   "peerDependencies": {
-    "@openmrs/esm-framework": "*",
+    "@openmrs/esm-framework": "4.x",
     "dayjs": "1.x",
     "react": "18.x",
     "react-i18next": "11.x",

@@ -10,7 +10,7 @@ on:
       - created
 
 env:
-  ESM_NAME: "@ohri/esm-namibia-emr"
+  ESM_NAME: "@ohri/esm-namibia-emr-app"
   JS_NAME: "esm-namibia-emr-app.js"
 
 jobs:

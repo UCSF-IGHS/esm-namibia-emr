@@ -2691,9 +2691,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ohri/esm-namibia-emr@workspace:.":
+"@ohri/esm-namibia-emr-app@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@ohri/esm-namibia-emr@workspace:."
+  resolution: "@ohri/esm-namibia-emr-app@workspace:."
   dependencies:
     "@carbon/react": ^1.14.0
     "@ohri/openmrs-esm-ohri-commons-lib": ^1.0.0-pre.2016
@@ -2738,7 +2738,7 @@ __metadata:
     webpack: ^5.74.0
     webpack-cli: ^4.10.0
   peerDependencies:
-    "@openmrs/esm-framework": "*"
+    "@openmrs/esm-framework": 4.x
     dayjs: 1.x
     react: 18.x
     react-i18next: 11.x

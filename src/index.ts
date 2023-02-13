@@ -1,5 +1,11 @@
-import { getAsyncLifecycle, defineConfigSchema } from "@openmrs/esm-framework";
+import {
+  getAsyncLifecycle,
+  defineConfigSchema,
+  provide,
+} from "@openmrs/esm-framework";
 import { configSchema } from "./config-schema";
+import patientDashboardsConfig from "./namibia-esm-and-dashboards-config.json";
+import namibiaDashboardsConfig from "./namibia-config";
 
 declare var __VERSION__: string;
 const version = __VERSION__;
@@ -17,48 +23,29 @@ const backendDependencies = {
 };
 
 function setupOpenMRS() {
-  const moduleName = "@ohri/esm-namibia-emr";
+  const moduleName = "@ohri/esm-namibia-emr-app";
 
   const options = {
-    featureName: "esm-namibia-emr",
+    featureName: "esm-namibia-emr-app",
     moduleName,
   };
 
   defineConfigSchema(moduleName, configSchema);
 
+  provide(patientDashboardsConfig);
+  provide(namibiaDashboardsConfig);
+
   return {
-    pages: [
-      {
-        load: getAsyncLifecycle(() => import("./hello"), options),
-        route: "hello",
-      },
-    ],
+    pages: [],
     extensions: [
-      {
-        name: "Red box",
-        load: getAsyncLifecycle(
-          () => import("./boxes/extensions/red-box"),
-          options
-        ),
-        slot: "Boxes",
-      },
-      {
-        name: "Blue box",
-        load: getAsyncLifecycle(
-          () => import("./boxes/extensions/blue-box"),
-          options
-        ),
-        slot: "Boxes",
-        // same as `slots: ["Boxes"],`
-      },
-      {
-        name: "Brand box",
-        load: getAsyncLifecycle(
-          () => import("./boxes/extensions/brand-box"),
-          options
-        ),
-        slot: "Boxes",
-      },
+      // {
+      //   name: "Red box",
+      //   load: getAsyncLifecycle(
+      //     () => import("./boxes/extensions/red-box"),
+      //     options
+      //   ),
+      //   slot: "Boxes",
+      // },
     ],
   };
 }
