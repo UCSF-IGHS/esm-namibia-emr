@@ -33,7 +33,7 @@ function setupOpenMRS() {
   defineConfigSchema(moduleName, configSchema);
 
   provide(patientDashboardsConfig);
-  provide(namibiaDashboardsConfig);
+  // provide(namibiaDashboardsConfig);
 
   return {
     pages: [],
