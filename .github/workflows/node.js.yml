@@ -82,20 +82,9 @@ jobs:
           node-version: "18.x"
           registry-url: 'https://registry.npmjs.org'
       - run: yarn install --immutable
-      # - run: yarn config set npmAuthToken "${NODE_AUTH_TOKEN}" &&  yarn npm publish
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_OHRI_ACCESS_TOKEN }}
-
-      # - run: |
-      #    yarn config set npmAlwaysAuth true
-      #    yarn config set npmAuthToken ${{ secrets.NPM_OHRI_ACCESS_TOKEN }}
-      # - run: yarn npm publish --tag next
-
-      - run: sed -i -e "s/\(\"version\":\\s\+\"\([0-9]\+\.\?\)\+\)/\1-pre.${{ github.run_number }}/" 'package.json'
-      - run: |
-         yarn config set npmAlwaysAuth true
-         yarn config set npmAuthToken ${{ secrets.NPM_OHRI_ACCESS_TOKEN }}
-      - run: yarn npm publish --tag next
+      - run: yarn config set npmAuthToken "${NODE_AUTH_TOKEN}" &&  yarn npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
   deploy:
     runs-on: ubuntu-latest
