@@ -49,15 +49,24 @@ jobs:
         with:
           node-version: "18.x"
           registry-url: "https://registry.npmjs.org"
-      - run: yarn install --immutable
-      - run: yarn version "$(node -e "console.log(require('semver').inc(require('./package.json').version, 'patch'))")-pre.${{ github.run_number }}"
-      - run: yarn build
+
+      - run: yarn install
+      - run: sed -i -e "s/\(\"version\":\\s\+\"\([0-9]\+\.\?\)\+\)/\1-pre.${{ github.run_number }}/" 'package.json'
+      - run: |
+         yarn config set npmAlwaysAuth true
+         yarn config set npmAuthToken ${{ secrets.NPM_OHRI_ACCESS_TOKEN }}
+      - run: yarn npm publish --tag next
+
+
+      # - run: yarn install --immutable
+      # - run: yarn version "$(node -e "console.log(require('semver').inc(require('./package.json').version, 'patch'))")-pre.${{ github.run_number }}"
+      # - run: yarn build
       # - run: git config user.email "<>" && git config user.name "Namibia CI"
       # - run: git add . && git commit -m "Prerelease version" --no-verify
       # - run: yarn config set npmAuthToken "${NODE_AUTH_TOKEN}" && yarn npm publish --tag next
-      - run: yarn publish --access public --tag next
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_OHRI_ACCESS_TOKEN }}
+      # - run: yarn publish --access public --tag next
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_OHRI_ACCESS_TOKEN }}
       # - name: Upload Artifacts
       #   uses: actions/upload-artifact@v3
       #   with:
