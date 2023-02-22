@@ -59,7 +59,7 @@ jobs:
 
       - run: npm publish --access public --tag next
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_OHRI_ACCESS_TOKEN }}
 
 
       # - run: yarn install --immutable
