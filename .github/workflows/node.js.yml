@@ -57,7 +57,7 @@ jobs:
       #    yarn config set npmAuthToken ${{ secrets.NPM_OHRI_ACCESS_TOKEN }}
       # - run: yarn npm publish --tag next
 
-      - run: yarn publish --access public --tag next
+      - run: npm publish --access public --tag next
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
