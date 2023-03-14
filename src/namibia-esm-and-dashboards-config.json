@@ -34,6 +34,17 @@
       "uuids": ["05a29f94-c0ed-11e2-94be-8c13b969e334"]
     }
   },
+  "@openmrs/esm-patient-registration-app": {
+    "Translation overrides": {
+      "en": {
+        "relationshipsSection": "Next of Kin",
+        "relationshipPlaceholder": "Next of Kin",
+        "relationship": "Relationship type",
+        "addRelationshipButtonText": "Add Next of Kin",
+        "searchAddress": "Search Country - District"
+      }
+    }
+  },
   "@openmrs/esm-styleguide": {
     "Brand color #1": "#1A3054",
     "Brand color #2": "#131E35",
