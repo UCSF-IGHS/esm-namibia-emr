@@ -41,7 +41,8 @@
         "relationshipPlaceholder": "Next of Kin",
         "relationship": "Relationship type",
         "addRelationshipButtonText": "Add Next of Kin",
-        "searchAddress": "Search Country - District"
+        "searchAddress": "Search Country - District",
+        "region": "Region"
       }
     }
   },
