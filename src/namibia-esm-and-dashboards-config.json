@@ -62,12 +62,21 @@
         "validation": {
           "matches": "^[0-9+]+$"
         }
+      },
+      {
+        "id": "phone",
+        "type": "person attribute",
+        "uuid": "14d4f066-15f5-102d-96e4-000c29c2a5d7",
+        "showHeading": false,
+        "validation": {
+          "matches": ""
+        }
       }
     ],
     "sections": ["demographics", "contact", "nextofkin", "relationships"],
     "sectionDefinitions": [
-        {"id": "nextofkin", "name": "Next of Kin", "fields":["nextOfKinName", "nextOfKinContactNo", "phone"]},
-        {"id": "relationships", "name": "Create relationship"}    
+        { "id": "nextofkin", "name": "Next of Kin", "fields":["nextOfKinName", "nextOfKinContactNo"] },
+        { "id": "relationships", "name": "Create relationship" }    
     ]
   },
 
