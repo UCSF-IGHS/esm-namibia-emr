@@ -7,7 +7,7 @@
   "main": "src/index.ts",
   "source": true,
   "scripts": {
-    "start": "openmrs develop --backend https://ohri-namibia.globalhealthapp.net",
+    "start": "openmrs develop --backend https://ohri-namibia-dev.globalhealthapp.net",
     "serve": "webpack serve --mode=development",
     "build": "webpack --mode production",
     "analyze": "webpack --mode=production --env.analyze=true",
