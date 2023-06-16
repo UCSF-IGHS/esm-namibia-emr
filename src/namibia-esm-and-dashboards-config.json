@@ -45,6 +45,13 @@
         "region": "Region"
       }
     },
+    "fieldConfigurations": {
+      "address": {
+        "useAddressHierarchy": {
+          "searchAddressByLevel": true
+        }
+      }
+    },
     "fieldDefinitions": [
       {
         "id": "nextOfKinName",
