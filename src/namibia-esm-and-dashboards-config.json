@@ -16,6 +16,7 @@
           "allergies-summary-dashboard",
           "attachments-results-summary-dashboard",
           "drug-orders-summary-dashboard",
+          "clinical-views-divider",
           "offline-tools-patient-chart-actions-dashboard-link"
         ]
       }
@@ -56,7 +57,7 @@
       {
         "id": "nextOfKinName",
         "label": "Name of next of kin",
-        "type": "person attribute", 
+        "type": "person attribute",
         "uuid": "dc0cf7a8-dede-4c3d-9db4-730900aedd1a",
         "showHeading": false
       },
@@ -83,7 +84,7 @@
     "sections": ["demographics", "contact", "nextofkin", "relationships"],
     "sectionDefinitions": [
         { "id": "nextofkin", "name": "Next of Kin", "fields":["nextOfKinName", "nextOfKinContactNo"] },
-        { "id": "relationships", "name": "Create relationship" }    
+        { "id": "relationships", "name": "Create relationship" }
     ]
   },
 
