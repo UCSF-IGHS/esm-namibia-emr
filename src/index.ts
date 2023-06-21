@@ -37,16 +37,7 @@ function setupOpenMRS() {
 
   return {
     pages: [],
-    extensions: [
-      // {
-      //   name: "Red box",
-      //   load: getAsyncLifecycle(
-      //     () => import("./boxes/extensions/red-box"),
-      //     options
-      //   ),
-      //   slot: "Boxes",
-      // },
-    ],
+    extensions: [],
   };
 }
 
