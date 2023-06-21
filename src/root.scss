@@ -1,0 +1,10 @@
+@use '@carbon/styles/scss/spacing';
+@use '@carbon/styles/scss/type';
+@import "~@openmrs/esm-styleguide/src/vars";
+
+
+// Patient chart overrides
+
+div[class*='-esm-patient-chart__patient-chart__chartReview'] {
+  max-width: 100% !important;
+}
