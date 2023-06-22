@@ -23,6 +23,17 @@
     },
     "notesConceptUuids": ["161011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "437d1e25-e7ab-481c-aabc-01f21c6cdef1"]
   },
+  "@ohri/openmrs-esm-ohri-core-app": {
+    "extensionSlots": {
+      "dashboard-links-slot":{
+        "remove":[
+            "appointments-ohri-dashboard-ext",
+            "dispensing-ohri-dashboard-ext",
+            "service-queues-ohri-dashboard-ext"
+        ]
+      }
+    }
+  },
   "@openmrs/esm-patient-banner-app": {
     "extensionSlots": {
       "patient-actions-slot": {
