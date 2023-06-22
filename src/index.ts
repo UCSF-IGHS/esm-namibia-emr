@@ -10,7 +10,7 @@ import namibiaDashboardsConfig from "./namibia-config";
 declare var __VERSION__: string;
 const version = __VERSION__;
 
-require('./root.scss');
+require("./root.scss");
 
 const importTranslation = require.context(
   "../translations",
