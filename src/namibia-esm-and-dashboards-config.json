@@ -19,6 +19,18 @@
           "clinical-views-divider",
           "offline-tools-patient-chart-actions-dashboard-link"
         ]
+      },
+      "action-menu-chart-items-slot": {
+        "remove": [
+          "visit-note-nav-button",
+          "clinical-form-action-menu",
+          "order-basket-action-menu"
+        ]
+      },
+      "action-menu-non-chart-items-slot": {
+        "remove":[
+          "patient-list-action-menu"
+        ]
       }
     },
     "notesConceptUuids": ["161011AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", "437d1e25-e7ab-481c-aabc-01f21c6cdef1"]
