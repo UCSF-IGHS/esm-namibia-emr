@@ -41,7 +41,8 @@
         "remove":[
             "appointments-ohri-dashboard-ext",
             "dispensing-ohri-dashboard-ext",
-            "service-queues-ohri-dashboard-ext"
+            "service-queues-ohri-dashboard-ext",
+            "home-dashboard-ext"
         ]
       }
     }
