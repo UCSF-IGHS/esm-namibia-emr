@@ -38,7 +38,12 @@ function setupOpenMRS() {
   // provide(namibiaDashboardsConfig);
 
   return {
-    pages: [],
+    pages: [
+      {
+        load: getAsyncLifecycle(() => import("./root"), options),
+        route: /^home/,
+      },
+    ],
     extensions: [],
   };
 }
