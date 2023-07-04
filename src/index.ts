@@ -7,40 +7,24 @@ import { configSchema } from "./config-schema";
 import patientDashboardsConfig from "./namibia-esm-and-dashboards-config.json";
 import namibiaDashboardsConfig from "./namibia-config";
 
-declare var __VERSION__: string;
-const version = __VERSION__;
-
 require("./root.scss");
 
-const importTranslation = require.context(
+export const importTranslation = require.context(
   "../translations",
   false,
   /.json$/,
   "lazy"
 );
+const moduleName = "@ohri/esm-namibia-emr-app";
 
-const backendDependencies = {
-  fhir2: "^1.2.0",
-  "webservices.rest": "^2.2.0",
+const options = {
+  featureName: "esm-namibia-emr-app",
+  moduleName,
 };
 
-function setupOpenMRS() {
-  const moduleName = "@ohri/esm-namibia-emr-app";
-
-  const options = {
-    featureName: "esm-namibia-emr-app",
-    moduleName,
-  };
-
+export function startupApp() {
   defineConfigSchema(moduleName, configSchema);
 
   provide(patientDashboardsConfig);
   // provide(namibiaDashboardsConfig);
-
-  return {
-    pages: [],
-    extensions: [],
-  };
 }
-
-export { backendDependencies, importTranslation, setupOpenMRS, version };
