@@ -6,7 +6,7 @@ import {
 } from "@openmrs/esm-framework";
 import { configSchema } from "./config-schema";
 import patientDashboardsConfig from "./namibia-esm-and-dashboards-config.json";
-import { ConfigIniz } from "./root";
+import { ConfigInitializer } from "./root";
 
 require("./root.scss");
 
@@ -35,4 +35,4 @@ export const mnchClinicalDashboard = getAsyncLifecycle(
 
 // There is a regression with how configs are being loaded by framework driven by supported routes.
 // This hack forces the framework to run this module's starter func on initial load
-export const configInitializer = getSyncLifecycle(ConfigIniz, options);
+export const configInitializer = getSyncLifecycle(ConfigInitializer, options);
