@@ -56,7 +56,7 @@ jobs:
       - run: git add . && git commit -m "Prerelease version" --no-verify
       - run: yarn config set npmAuthToken "${NODE_AUTH_TOKEN}" && npm publish --access public --tag next
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NAMIBIA_NPM_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
 
   release:
     runs-on: ubuntu-latest
