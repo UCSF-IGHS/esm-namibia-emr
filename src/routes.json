@@ -7,13 +7,7 @@
       {
         "component": "mnchClinicalDashboard",
         "route": "home"
-      },
-      {
-        "component": "configInitializer",
-        "route": true,
-        "online": true,
-        "offline": true
-      } 
+      }
     ],
     "extensions": []
   }
