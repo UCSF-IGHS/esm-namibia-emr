@@ -29,7 +29,3 @@ export const mnchClinicalDashboard = getAsyncLifecycle(
   () => import("./root"),
   options
 );
-
-// There is a regression with how configs are being loaded by framework driven by supported routes.
-// This hack forces the framework to run this module's starter func on initial load
-
