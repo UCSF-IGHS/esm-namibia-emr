@@ -13,7 +13,3 @@ export default function Root() {
     </BrowserRouter>
   );
 }
-
-export function ConfigInitializer() {
-  return <></>;
-}
