@@ -5,6 +5,7 @@ import {
   getSyncLifecycle,
 } from "@openmrs/esm-framework";
 import { configSchema } from "./config-schema";
+import logoConfig from "./namibia-config";
 
 require("./root.scss");
 
@@ -23,6 +24,7 @@ const options = {
 
 export function startupApp() {
   defineConfigSchema(moduleName, configSchema);
+  provide(logoConfig);
 }
 
 export const mnchClinicalDashboard = getAsyncLifecycle(
