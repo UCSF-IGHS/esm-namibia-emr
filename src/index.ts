@@ -6,6 +6,7 @@ import {
 } from "@openmrs/esm-framework";
 import { configSchema } from "./config-schema";
 import patientDashboardsConfig from "./namibia-esm-and-dashboards-config.json";
+import logoConfig from "./namibia-config";
 import { ConfigInitializer } from "./root";
 
 require("./root.scss");
@@ -26,6 +27,7 @@ const options = {
 export function startupApp() {
   defineConfigSchema(moduleName, configSchema);
   provide(patientDashboardsConfig);
+  provide(logoConfig);
 }
 
 export const mnchClinicalDashboard = getAsyncLifecycle(
