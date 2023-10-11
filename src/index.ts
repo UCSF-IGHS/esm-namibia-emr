@@ -1,7 +1,5 @@
 import { getAsyncLifecycle, defineConfigSchema } from "@openmrs/esm-framework";
 import { configSchema } from "./config-schema";
-import { registerExpressionHelper } from "@openmrs/openmrs-form-engine-lib";
-import { generateInfantPTrackerId } from "./helpers/ptracker-form-helpers";
 
 require("./root.scss");
 
@@ -20,10 +18,6 @@ const options = {
 
 export function startupApp() {
   defineConfigSchema(moduleName, configSchema);
-  registerExpressionHelper(
-    "customGenerateInfantPTrackerId",
-    generateInfantPTrackerId
-  );
 }
 
 export const mnchClinicalDashboard = getAsyncLifecycle(
