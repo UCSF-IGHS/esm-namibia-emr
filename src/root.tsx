@@ -7,7 +7,7 @@ export default function Root() {
       <Routes>
         <Route
           path="/home"
-          element={<Navigate to={"/dashboard/mother-child-health"} replace />}
+          element={<Navigate to={"/home/mother-child-health"} replace />}
         />
       </Routes>
     </BrowserRouter>
